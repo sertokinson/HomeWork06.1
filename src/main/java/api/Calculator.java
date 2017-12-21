@@ -2,10 +2,12 @@ package api;
 
 import impl.Operation;
 
+import java.util.List;
+
 public interface Calculator {
-    void calc(Integer a, Operation operation, Integer b);
-    void calc(Double a,Operation operation,Double b);
-    void calc(Integer a,Operation operation,Double b);
-    void calc(Double a,Operation operation,Integer b);
+    Integer calc(Integer a, Operation operation, Integer b);
+    Double calc(Double a,Operation operation,Double b);
+    Double calc(Integer a,Operation operation,Double b);
+    Double calc(Double a,Operation operation,Integer b);
 
 }

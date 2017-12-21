@@ -1,0 +1,7 @@
+organization=sertokinson-github
+projectKey=com.sbt.javaschool:calculator
+serverUrl=https://sonarcloud.io
+serverVersion=6.7.0.33301
+dashboardUrl=https://sonarcloud.io/dashboard/index/com.sbt.javaschool:calculator
+ceTaskId=AWBuZAl3E5-t8Obqz1Jv
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWBuZAl3E5-t8Obqz1Jv

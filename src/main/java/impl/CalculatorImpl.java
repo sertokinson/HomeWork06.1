@@ -2,70 +2,61 @@ package impl;
 
 import api.Calculator;
 
+@Cash
 public class CalculatorImpl implements Calculator {
-
-    public void calc(Integer a, Operation operation, Integer b) {
+    public Integer calc(Integer a, Operation operation, Integer b) {
         switch (operation){
-            case Addition:
-                System.out.println(a+b);
-                break;
-            case Multiple:
-                System.out.println(a*b);
-                break;
-            case Division:
-                System.out.println(a/b);
-                break;
-            case Subtraction:
-                System.out.println(a-b);
+            case ADDITION:
+               return a+b;
+            case MULTIPLE:
+                return a*b;
+            case DIVISION:
+                return a/b;
+            case SUBTRACTION:
+                return a-b;
         }
+        return null;
     }
 
-    public void calc(Double a, Operation operation, Double b) {
+    public Double calc(Double a, Operation operation, Double b) {
         switch (operation){
-            case Addition:
-                System.out.println(a+b);
-                break;
-            case Multiple:
-                System.out.println(a*b);
-                break;
-            case Division:
-                System.out.println(a/b);
-                break;
-            case Subtraction:
-                System.out.println(a-b);
+            case ADDITION:
+                return a+b;
+            case MULTIPLE:
+                return a*b;
+            case DIVISION:
+                return a/b;
+            case SUBTRACTION:
+                return a-b;
         }
-
+        return null;
     }
 
-    public void calc(Integer a, Operation operation, Double b) {
+    public Double calc(Integer a, Operation operation, Double b) {
         switch (operation){
-            case Addition:
-                System.out.println(a+b);
-                break;
-            case Multiple:
-                System.out.println(a*b);
-                break;
-            case Division:
-                System.out.println(a/b);
-                break;
-            case Subtraction:
-                System.out.println(a-b);
+            case ADDITION:
+                return a+b;
+            case MULTIPLE:
+                return a*b;
+            case DIVISION:
+                return a/b;
+            case SUBTRACTION:
+                return a-b;
         }
+        return null;
     }
 
-    public void calc(Double a, Operation operation, Integer b) {
+    public Double calc(Double a, Operation operation, Integer b) {
         switch (operation){
-            case Addition:
-                System.out.println(a+b);
-                break;
-            case Multiple:
-                System.out.println(a*b);
-                break;
-            case Division:
-                System.out.println(a/b);
-                break;
-            case Subtraction:
-                System.out.println(a-b);
+            case ADDITION:
+                return a+b;
+            case MULTIPLE:
+                return a*b;
+            case DIVISION:
+                return a/b;
+            case SUBTRACTION:
+                return a-b;
         }
+        return null;
     }
 }

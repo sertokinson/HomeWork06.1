@@ -1,5 +1,5 @@
 package impl;
 
 public enum Operation {
-    Division,Multiple,Addition,Subtraction
+    DIVISION, MULTIPLE, ADDITION, SUBTRACTION
 }
