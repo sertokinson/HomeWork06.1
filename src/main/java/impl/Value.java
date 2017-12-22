@@ -1,8 +1,9 @@
 package impl;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Value {
+public class Value implements Serializable {
     Object a;
     Object b;
     Operation operation;

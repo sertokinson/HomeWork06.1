@@ -8,5 +8,5 @@
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
     <bean class="impl.CalculatorImpl"/>
     <bean class="impl.CashAnnotation"/>
-    <bean class="impl.ProfilingHandlerBeanPostProcessor"/>
+    <bean class="impl.CashHandlerBeanPostProcessor"/>
 </beans>

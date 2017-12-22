@@ -2,7 +2,7 @@ package impl;
 
 import api.Calculator;
 
-@Cash
+@Cash(typeCash = TypeCash.FILE)
 public class CalculatorImpl implements Calculator {
     public Integer calc(Integer a, Operation operation, Integer b) {
         switch (operation){
