@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be542dc4-1ad3-4265-9476-928c150b4abd" name="Default" comment="Сделал кеш:&#10;1.Перехватывается метод calc в PostProcessAfterInitialization&#10;2.Записывается результат в мапу и если этот результат там уже есть, то берется из него, если нет, то вызывается сам метод">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/impl/TypeCash.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/CalculatorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/impl/CalculatorImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/Cash.java" afterPath="$PROJECT_DIR$/src/main/java/impl/Cash.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/impl/CashAnnotation.java" afterPath="$PROJECT_DIR$/src/main/java/impl/CashAnnotation.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/ProfilingHandlerBeanPostProcessor.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/impl/Value.java" afterPath="$PROJECT_DIR$/src/main/java/impl/Value.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/context.xml" afterPath="$PROJECT_DIR$/src/main/resources/context.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/CalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/api/CalculatorTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/context.xml" afterPath="$PROJECT_DIR$/target/classes/context.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/impl/CalculatorImpl.class" afterPath="$PROJECT_DIR$/target/classes/impl/CalculatorImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/impl/Cash.class" afterPath="$PROJECT_DIR$/target/classes/impl/Cash.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java" />
       <change beforePath="$PROJECT_DIR$/target/classes/impl/CashAnnotation.class" afterPath="$PROJECT_DIR$/target/classes/impl/CashAnnotation.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/impl/ProfilingHandlerBeanPostProcessor$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/impl/ProfilingHandlerBeanPostProcessor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/impl/Value.class" afterPath="$PROJECT_DIR$/target/classes/impl/Value.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/api/CalculatorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/api/CalculatorTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/impl/CashHandlerBeanPostProcessor.class" afterPath="$PROJECT_DIR$/target/classes/impl/CashHandlerBeanPostProcessor.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,8 +27,8 @@
       <file leaf-file-name="CashHandlerBeanPostProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+            <state relative-caret-position="19">
+              <caret line="26" column="186" lean-forward="true" selection-start-line="26" selection-start-column="186" selection-end-line="26" selection-end-column="186" />
               <folding />
             </state>
           </provider>
@@ -74,8 +61,8 @@
       <file leaf-file-name="CashAnnotation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/impl/CashAnnotation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="46" column="81" lean-forward="false" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+            <state relative-caret-position="132">
+              <caret line="45" column="81" lean-forward="true" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,9 +161,9 @@
         <option value="$PROJECT_DIR$/src/main/java/impl/Cash.java" />
         <option value="$PROJECT_DIR$/src/main/java/impl/CashMemory.java" />
         <option value="$PROJECT_DIR$/src/main/java/impl/CashFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java" />
         <option value="$PROJECT_DIR$/src/test/java/api/CalculatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/impl/CalculatorImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/impl/CashAnnotation.java" />
       </list>
     </option>
@@ -227,6 +214,32 @@
             <path>
               <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="calculator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -491,15 +504,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculatorTest - 2017.12.22 at 17h 07m 54s.xml">
-      <configuration name="CalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest - 2017.12.22 at 17h 08m 45s.xml">
-      <configuration name="CalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest - 2017.12.22 at 17h 09m 24s.xml">
-      <configuration name="CalculatorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CalculatorTest - 2017.12.22 at 17h 10m 07s.xml">
       <configuration name="CalculatorTest" configurationId="JUnit" />
     </history-entry>
@@ -521,9 +525,19 @@
     <history-entry file="CalculatorTest_calc - 2017.12.22 at 17h 23m 44s.xml">
       <configuration name="CalculatorTest.calc" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CalculatorTest_calc - 2017.12.22 at 17h 33m 57s.xml">
+      <configuration name="CalculatorTest.calc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorTest_calc - 2017.12.22 at 17h 35m 22s.xml">
+      <configuration name="CalculatorTest.calc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorTest_calc - 2017.12.22 at 17h 37m 06s.xml">
+      <configuration name="CalculatorTest.calc" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -539,7 +553,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44880545" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -959,24 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/impl/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/api/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1005,10 +1001,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/impl/Value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/impl/CashHandlerBeanPostProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="26" column="186" lean-forward="true" selection-start-line="26" selection-start-column="186" selection-end-line="26" selection-end-column="186" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/impl/CashAnnotation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="46" column="81" lean-forward="false" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+        <state relative-caret-position="132">
+          <caret line="45" column="81" lean-forward="true" selection-start-line="45" selection-start-column="81" selection-end-line="45" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

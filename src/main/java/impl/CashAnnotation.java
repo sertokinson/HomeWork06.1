@@ -5,10 +5,8 @@ import org.springframework.util.ReflectionUtils;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.Map;
 
 public class CashAnnotation {
@@ -30,7 +28,7 @@ public class CashAnnotation {
                 StringBuilder stringValue=new StringBuilder();
                 stringValue.append(args[0]+" "+args[2]+" "+args[1]+" ");
                 int countSpace=0;
-                try (FileReader reader = new FileReader("C:\\Users\\Сергей\\Desktop\\JavaSchool\\Homeworks\\HomeWork_06\\new\\calculator\\cash.txt")) {
+                try (FileReader reader = new FileReader(CashHandlerBeanPostProcessor.FILE_NAME)) {
                     int c;
                     while ((c = reader.read()) != -1) {
                         s.append((char) c);
@@ -44,6 +42,7 @@ public class CashAnnotation {
                                 if(method.getReturnType().equals(Integer.class)) {
                                     return (int)Character.digit(s.charAt(0), 10);
                                 }
+                                System.out.println(Character.getNumericValue(s.charAt(0)));
                                 return  (double)Character.digit(s.charAt(0), 10);
                             }
                         if ((char) c == '\n'){
