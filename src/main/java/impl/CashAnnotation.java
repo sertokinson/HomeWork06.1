@@ -2,12 +2,11 @@ package impl;
 
 import org.springframework.util.ReflectionUtils;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class CashAnnotation {
     public static Object cashingInMemory(Object bean, Method method, Object[] args, Map<Value, Object> mapCash) throws InvocationTargetException, IllegalAccessException {
@@ -23,45 +22,15 @@ public class CashAnnotation {
         System.out.println("Записали в кеш:");
         return result;
     }
-    public static Object cashInFile(Object bean, Method method, Object[] args, FileWriter writer) throws InvocationTargetException, IllegalAccessException {
-                StringBuilder s = new StringBuilder();
-                StringBuilder stringValue=new StringBuilder();
-                stringValue.append(args[0]+" "+args[2]+" "+args[1]+" ");
-                int countSpace=0;
-                try (FileReader reader = new FileReader(CashHandlerBeanPostProcessor.FILE_NAME)) {
-                    int c;
-                    while ((c = reader.read()) != -1) {
-                        s.append((char) c);
-                        if ((char) c == ' ')
-                            countSpace++;
-                        if(countSpace==3)
-                            if(s.toString().equals(stringValue.toString())) {
-                                s=new StringBuilder();
-                                s.append((char)reader.read());
-                                System.out.println("Значение из кеша:");
-                                if(method.getReturnType().equals(Integer.class)) {
-                                    return (int)Character.digit(s.charAt(0), 10);
-                                }
-                                System.out.println(Character.getNumericValue(s.charAt(0)));
-                                return  (double)Character.digit(s.charAt(0), 10);
-                            }
-                        if ((char) c == '\n'){
-                            countSpace=0;
-                            s=new StringBuilder();
-                        }
-                    }
-                } catch (IOException ex) {
-                    System.out.println(ex.getMessage());
-                }
-
+    public static Object cashInFile(Object bean, Method method, Object[] args,ObjectOutputStream oos) throws InvocationTargetException, IllegalAccessException, IOException, ClassNotFoundException {
+        Value value = new Value(args[0], args[2], (Operation) args[1],args[0]);
+        FileInputStream fis = new FileInputStream(CashHandlerBeanPostProcessor.FILE_NAME);
+        ObjectInputStream oin= new ObjectInputStream(fis);
+        oos.writeObject(value);
+        oos.flush();
+        Value ts = (Value) oin.readObject();
+        System.out.println("version="+ts.result);
         Object result = method.invoke(bean, args);
-        System.out.println("Записали в кеш:");
-        try {
-            writer.write(args[0] + " " + args[2] + " " + args[1] + " " + result + "\n");
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return result;
     }
 }
