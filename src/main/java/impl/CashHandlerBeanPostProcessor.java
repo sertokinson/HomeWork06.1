@@ -22,8 +22,16 @@ public class CashHandlerBeanPostProcessor implements BeanPostProcessor {
         Class<?> beanClass = bean.getClass();
         Cash annotation = beanClass.getAnnotation(Cash.class);
         if (annotation != null) {
-            if (annotation.typeCash() == TypeCash.FILE)
-                return Proxy.newProxyInstance(beanClass.getClassLoader(), beanClass.getInterfaces(), (proxy, method, args) -> CashAnnotation.cashInFile(bean, method, args, new ObjectOutputStream(new FileOutputStream(FILE_NAME))));
+            if (annotation.typeCash() == TypeCash.FILE) {
+                try {
+                    DataOutputStream dos=new DataOutputStream(new FileOutputStream(FILE_NAME,true));
+                    return Proxy.newProxyInstance(beanClass.getClassLoader(), beanClass.getInterfaces(), (proxy, method, args) -> CashAnnotation.cashInFile(bean, method, args, dos));
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+
 
                 if (annotation.typeCash() == TypeCash.MEMORY)
                     return Proxy.newProxyInstance(beanClass.getClassLoader(), beanClass.getInterfaces(), (proxy, method, args) -> CashAnnotation.cashingInMemory(bean, method, args, mapCash));

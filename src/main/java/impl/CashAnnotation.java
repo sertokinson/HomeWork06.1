@@ -22,15 +22,31 @@ public class CashAnnotation {
         System.out.println("Записали в кеш:");
         return result;
     }
-    public static Object cashInFile(Object bean, Method method, Object[] args,ObjectOutputStream oos) throws InvocationTargetException, IllegalAccessException, IOException, ClassNotFoundException {
-        Value value = new Value(args[0], args[2], (Operation) args[1],args[0]);
-        FileInputStream fis = new FileInputStream(CashHandlerBeanPostProcessor.FILE_NAME);
-        ObjectInputStream oin= new ObjectInputStream(fis);
-        oos.writeObject(value);
-        oos.flush();
-        Value ts = (Value) oin.readObject();
-        System.out.println("version="+ts.result);
+    public static Object cashInFile(Object bean, Method method, Object[] args, DataOutputStream oos) throws InvocationTargetException, IllegalAccessException, IOException, ClassNotFoundException {
+        DataInputStream dis=new DataInputStream(new FileInputStream(CashHandlerBeanPostProcessor.FILE_NAME));
+        String s=args[0]+" "+args[1]+" "+args[2];
+        while (dis.available()>0){
+            String s2=dis.readUTF();
+            Integer resultInt=null;
+            Double resultDouble = null;
+            if(dis.readBoolean())
+                resultInt=dis.readInt();
+            else resultDouble=dis.readDouble();
+            if(s.equals(s2)){
+                System.out.println("Взяли из кеша:");
+                if(resultInt!=null)
+                    return resultInt;
+                return resultDouble;
+            }
+        }
+        System.out.println("Записали в кеш:");
         Object result = method.invoke(bean, args);
+        oos.writeUTF(s);
+        boolean type=method.getReturnType().equals(Integer.class);
+        oos.writeBoolean(type);
+        if(type)
+            oos.writeInt((Integer)result);
+        else oos.writeDouble((Double)result);
         return result;
     }
 }
